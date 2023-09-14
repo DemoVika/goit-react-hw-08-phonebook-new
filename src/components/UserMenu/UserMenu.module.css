@@ -1,9 +1,16 @@
 .wrapper {
   display: flex;
   align-items: center;
+  font-size: 18px;
   gap: 12px;
 }
-
 .username {
   font-weight: 700;
+}
+.button {
+  font-weight: 500;
+}
+.button:hover {
+  font-weight: bold;
+  color: teal;
 }

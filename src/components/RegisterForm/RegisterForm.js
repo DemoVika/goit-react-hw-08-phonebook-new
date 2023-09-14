@@ -1,6 +1,15 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import css from './RegisterForm.module.css';
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  Button,
+  InputLeftElement,
+  InputGroup,
+  Icon,
+} from '@chakra-ui/react';
+import { FaUser, FaRegEnvelope, FaKey } from 'react-icons/fa';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -19,20 +28,63 @@ export const RegisterForm = () => {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-      <label className={css.label}>
-        Username
-        <input type="text" name="name" />
-      </label>
-      <label className={css.label}>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label className={css.label}>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Register</button>
+    <form onSubmit={handleSubmit} autoComplete="off" width="320px">
+      <FormControl isRequired={true}>
+        <FormLabel>Name</FormLabel>
+        <InputGroup>
+          <Input
+            borderColor="teal.500"
+            boxShadow="lg"
+            name="name"
+            required
+            placeholder="Фиксик Файер"
+          />
+          <InputLeftElement pointerEvents="none">
+            <Icon as={FaUser} color="teal.600" />
+          </InputLeftElement>
+        </InputGroup>
+
+        <FormLabel>Email</FormLabel>
+        <InputGroup>
+          <Input
+            borderColor="teal.500"
+            boxShadow="lg"
+            type="email"
+            name="email"
+            required
+            placeholder="example@gmail.com"
+          />
+          <InputLeftElement pointerEvents="none">
+            <Icon as={FaRegEnvelope} color="teal.600" />
+          </InputLeftElement>
+        </InputGroup>
+
+        <FormLabel>Password</FormLabel>
+        <InputGroup>
+          <Input
+            borderColor="teal.500"
+            boxShadow="lg"
+            type="password"
+            name="password"
+            required
+          />
+          <InputLeftElement pointerEvents="none">
+            <Icon as={FaKey} color="teal.600" />
+          </InputLeftElement>
+        </InputGroup>
+
+        <Button
+          type="submit"
+          colorScheme="teal"
+          variant="solid"
+          boxShadow="lg"
+          w="320px"
+          size="md"
+          mt="14px"
+        >
+          Registration
+        </Button>
+      </FormControl>
     </form>
   );
 };

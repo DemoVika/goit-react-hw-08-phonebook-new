@@ -1,8 +1,9 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './ContactList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAllContacts, selectFilter } from 'redux/contacts/selectors';
 import { deleteContact } from 'redux/contacts/operations';
+import { Button } from '@chakra-ui/react';
 
 const visibleContacts = (contacts, filter) => {
   return contacts.filter(contact => {
@@ -22,15 +23,18 @@ export const ContactList = () => {
     <ul className={css.list}>
       {visibleContacts(contacts, filter).map(item => {
         return (
-          <li key={item.id}>
-            {item.name} {item.number}{' '}
-            <button
+          <li className={css.item} key={item.id}>
+            {item.name} {item.number}
+            <Button
               className={css.button}
-              type="button"
+              colorScheme="teal"
+              variant="outline"
+              boxShadow="lg"
+              size="xs"
               onClick={() => handleDeleteItems(item.id)}
             >
               Delete
-            </button>
+            </Button>
           </li>
         );
       })}
@@ -38,11 +42,11 @@ export const ContactList = () => {
   );
 };
 
-// ContactList.protoTypes = {
-//   contacts: PropTypes.arrayOf({
-//     name: PropTypes.string.isRequired,
-//     id: PropTypes.string.isRequired,
-//     number: PropTypes.string.isRequired,
-//   }),
-//   filter: PropTypes.string.isRequired,
-// };
+ContactList.protoTypes = {
+  contacts: PropTypes.arrayOf({
+    name: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+  }),
+  filter: PropTypes.string.isRequired,
+};

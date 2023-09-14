@@ -1,33 +1,32 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import React from 'react';
+import background from '../images/fixiki-6a.jpg';
 
-// const styles = {
-//   container: {
-//     minHeight: 'calc(100vh - 50px)',
-//     display: 'flex',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//     // backgroundImage: 'url("../images/fixiki-6.jpg")',
-//   },
-//   title: {
-//     fontWeight: 500,
-//     fontSize: 48,
-//     textAlign: 'center',
-//   },
-// };
+const styles = {
+  container: {
+    minHeight: 'calc(100vh - 50px)',
+    display: 'flex',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+  },
+  title: {
+    zIndex: 999,
+    fontWeight: 700,
+    fontSize: 80,
+    marginTop: 10,
+    textAlign: 'center',
+  },
+};
 
 export default function Home() {
   return (
     <Box
       pos="relative"
-      h="400px"
+      h="auto"
       bg="rgba(255,0,0,0.1)"
-      bgImage="url('../images/fixiki-6.jpg')"
       _before={{
         content: '""',
-        // bgImage:
-        //   'url(https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg)',
-        // bgImage: 'url(../images/fixiki-6.jpg)',
+        bgImage: background,
         bgSize: 'cover',
         pos: 'absolute',
         top: 0,
@@ -37,12 +36,9 @@ export default function Home() {
         opacity: 0.9,
       }}
     >
-      <Text color="white">Phonebook</Text>
+      <div style={styles.container}>
+        <h1 style={styles.title}>PHONEBOOK</h1>
+      </div>
     </Box>
-    // <div style={styles.container}>
-    //   {/* <img src="../images/fixiki-6.jpg" alt="ggg" /> */}
-    //   <h1 style={styles.title}>Phonebook </h1>
-    // </div>
-    // </Box>
   );
 }
