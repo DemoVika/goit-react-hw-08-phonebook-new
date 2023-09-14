@@ -7,7 +7,7 @@ import background from '../../images/fixiki-5.jpg';
 export default function Login() {
   return (
     <Box pos="relative" h="auto" bg="rgba(255,0,0,0.1)" bgImage={background}>
-      <div style={css.container}>
+      <div className={css.container}>
         <Helmet>
           <title>Login</title>
         </Helmet>

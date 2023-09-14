@@ -21,7 +21,7 @@ export default function Contacts() {
 
   return (
     <Box pos="relative" h="auto" bg="rgba(255,0,0,0.1)" bgImage={background}>
-      <div style={css.container}>
+      <div className={css.container}>
         <Helmet>
           <title>Your contacts</title>
         </Helmet>

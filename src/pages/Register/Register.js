@@ -13,7 +13,7 @@ export default function Register() {
       bgImage={background}
       bgRepeat="no-repeat"
     >
-      <div style={css.container}>
+      <div className={css.container}>
         <Helmet>
           <title>Registration</title>
         </Helmet>

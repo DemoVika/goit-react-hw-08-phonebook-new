@@ -21,8 +21,8 @@ export default function Home() {
         opacity: 0.9,
       }}
     >
-      <div style={css.container}>
-        <h1 style={css.title}>PHONEBOOK</h1>
+      <div className={css.container}>
+        <h1 className={css.title}>PHONEBOOK</h1>
       </div>
     </Box>
   );
