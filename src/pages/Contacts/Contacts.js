@@ -7,20 +7,9 @@ import { selectLoading } from 'redux/contacts/selectors';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
 import { Box } from '@chakra-ui/react';
-import background from '../images/fixiki-8b.jpg';
+import css from './Contacts.module.css';
+import background from '../../images/fixiki-8b.jpg';
 import { Spinner } from '@chakra-ui/react';
-
-const styles = {
-  container: {
-    width: '250px',
-    minHeight: 'calc(100vh - 50px)',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
-};
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -32,7 +21,7 @@ export default function Contacts() {
 
   return (
     <Box pos="relative" h="auto" bg="rgba(255,0,0,0.1)" bgImage={background}>
-      <div style={styles.container}>
+      <div style={css.container}>
         <Helmet>
           <title>Your contacts</title>
         </Helmet>

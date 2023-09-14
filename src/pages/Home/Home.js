@@ -1,22 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
-import background from '../images/fixiki-6a.jpg';
-
-const styles = {
-  container: {
-    minHeight: 'calc(100vh - 50px)',
-    display: 'flex',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-  },
-  title: {
-    zIndex: 999,
-    fontWeight: 700,
-    fontSize: 80,
-    marginTop: 10,
-    textAlign: 'center',
-  },
-};
+import css from './Home.module.css';
+import background from '../../images/fixiki-6a.jpg';
 
 export default function Home() {
   return (
@@ -36,8 +21,8 @@ export default function Home() {
         opacity: 0.9,
       }}
     >
-      <div style={styles.container}>
-        <h1 style={styles.title}>PHONEBOOK</h1>
+      <div style={css.container}>
+        <h1 style={css.title}>PHONEBOOK</h1>
       </div>
     </Box>
   );

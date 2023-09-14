@@ -1,16 +1,8 @@
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
 import { Box } from '@chakra-ui/react';
 import { Helmet } from 'react-helmet';
-import background from '../images/fixiki-3a.png';
-
-const styles = {
-  container: {
-    minHeight: 'calc(100vh - 50px)',
-    display: 'flex',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-  },
-};
+import background from '../../images/fixiki-3a.png';
+import css from './Register.module.css';
 
 export default function Register() {
   return (
@@ -21,7 +13,7 @@ export default function Register() {
       bgImage={background}
       bgRepeat="no-repeat"
     >
-      <div style={styles.container}>
+      <div style={css.container}>
         <Helmet>
           <title>Registration</title>
         </Helmet>
