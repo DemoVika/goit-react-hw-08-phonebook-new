@@ -14,13 +14,7 @@ const styles = {
 
 export default function Login() {
   return (
-    <Box
-      pos="relative"
-      h="auto"
-      bg="rgba(255,0,0,0.1)"
-      bgImage={background}
-      bgRepeat="repeat"
-    >
+    <Box pos="relative" h="auto" bg="rgba(255,0,0,0.1)" bgImage={background}>
       <div style={styles.container}>
         <Helmet>
           <title>Login</title>
