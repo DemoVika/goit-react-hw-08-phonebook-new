@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import { Box } from '@chakra-ui/react';
 import { LoginForm } from 'components/LoginForm/LoginForm';
-import background from '../images/fixiki-5a.jpg';
+import background from '../images/fixiki-5.jpg';
 
 const styles = {
   container: {
