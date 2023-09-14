@@ -19,7 +19,7 @@ export default function Login() {
       h="auto"
       bg="rgba(255,0,0,0.1)"
       bgImage={background}
-      bgRepeat="no-repeat"
+      bgRepeat="repeat"
     >
       <div style={styles.container}>
         <Helmet>
